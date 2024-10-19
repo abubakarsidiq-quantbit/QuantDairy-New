@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LD-.###",
+ "creation": "2024-10-10 10:43:25.281574",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "warehouse",
+  "loan_amount",
+  "column_break_jqdj5",
+  "supplier",
+  "deduction_amount_per_bill",
+  "column_break_uirc9",
+  "supplier_name",
+  "mode_of_payment",
+  "mode_of_payment_type",
+  "section_break_vggrm",
+  "paid_from",
+  "column_break_ouomn",
+  "paid_to",
+  "column_break_jekbu",
+  "cost_center",
+  "section_break_wccmc",
+  "loan_deduction_instalment_list",
+  "deducted_amount",
+  "section_break_cfwhu",
+  "credit_account",
+  "column_break_cbup2",
+  "debit_account",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "loan_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Loan Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jqdj5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deduction_amount_per_bill",
+   "fieldtype": "Float",
+   "label": "Deduction Amount Per Bill",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_uirc9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Loan Deduction",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "loan_deduction_instalment_list",
+   "fieldtype": "Table",
+   "label": "Loan Deduction Instalment List",
+   "options": "Loan Deduction Instalment List",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "supplier.supplier_name",
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name"
+  },
+  {
+   "fieldname": "section_break_vggrm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "credit_account",
+   "fieldtype": "Link",
+   "label": "Credit Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cbup2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "debit_account",
+   "fieldtype": "Link",
+   "label": "Debit Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_cfwhu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deducted_amount",
+   "fieldtype": "Float",
+   "label": "Deducted Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Paid To",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ouomn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "paid_from",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Paid From",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jekbu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of Payment",
+   "options": "Mode of Payment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_wccmc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "mode_of_payment.type",
+   "fieldname": "mode_of_payment_type",
+   "fieldtype": "Data",
+   "label": "Mode of Payment Type"
+  },
+  {
+   "depends_on": "eval: doc.mode_of_payment_type != \"Cash\";",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "mandatory_depends_on": "eval: doc.mode_of_payment_type != \"Cash\";",
+   "options": "Cost Center"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Payment Entry",
+   "link_fieldname": "custom_loan_deduction"
+  }
+ ],
+ "modified": "2024-10-10 16:14:14.361882",
+ "modified_by": "Administrator",
+ "module": "quantdairy",
+ "name": "Loan Deduction",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

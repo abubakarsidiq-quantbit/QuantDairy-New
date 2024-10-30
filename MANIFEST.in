@@ -4,7 +4,6 @@ include *.json
 include *.md
 include *.py
 include *.txt
-<<<<<<< HEAD
 recursive-include quantdairy *.css
 recursive-include quantdairy *.csv
 recursive-include quantdairy *.html
@@ -17,17 +16,3 @@ recursive-include quantdairy *.py
 recursive-include quantdairy *.svg
 recursive-include quantdairy *.txt
 recursive-exclude quantdairy *.pyc
-=======
-recursive-include dairy *.css
-recursive-include dairy *.csv
-recursive-include dairy *.html
-recursive-include dairy *.ico
-recursive-include dairy *.js
-recursive-include dairy *.json
-recursive-include dairy *.md
-recursive-include dairy *.png
-recursive-include dairy *.py
-recursive-include dairy *.svg
-recursive-include dairy *.txt
-recursive-exclude dairy *.pyc
->>>>>>> a83cf1a336a2383ac7b71f630883ddfcd584d6e3

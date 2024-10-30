@@ -45,7 +45,7 @@
  "modified": "2024-10-10 11:49:09.025673",
  "modified_by": "Administrator",
  "module": "quantdairy",
- "name": "Loan Deduction Instalment List",
+ "name": "Deduction Instalment List",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

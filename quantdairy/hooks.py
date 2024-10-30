@@ -215,3 +215,14 @@ app_license = "MIT"
 # auth_hooks = [
 #	"quantdairy.auth.validate"
 # ]
+
+
+
+fixtures = [
+    {
+        "doctype": "Server Script",
+        "filters": [
+            ["name", "in", ["Apply Deduction For Transporter", "Create Deduction Entry"]],
+        ],
+    },
+]

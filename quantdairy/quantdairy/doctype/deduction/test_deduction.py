@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestLoanDeduction(FrappeTestCase):
+class TestDeduction(FrappeTestCase):
 	pass

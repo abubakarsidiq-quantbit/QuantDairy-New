@@ -12,7 +12,6 @@ class Deduction(Document):
 		self.get_instalment()
 
 	def make_payment_entry(self):
-		# frappe.throw(str(self))
 		payment=frappe.new_doc("Payment Entry")
 		payment.payment_type="Pay"
 		payment.mode_of_payment=self.mode_of_payment
